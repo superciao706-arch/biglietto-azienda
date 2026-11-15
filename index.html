@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#edf5fc">
+
+    <title>Contatti Aziendali</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <!-- INTESTAZIONE AZIENDALE -->
+    <header class="profilo">
+
+        <div class="logo">
+            <img src="logo.png" alt="Logo aziendale">
+        </div>
+
+        <div class="profilo-testo">
+            <span class="etichetta">General Manager</span>
+
+            <h1 id="nome-persona">
+                Massimiliano Balducci
+            </h1>
+
+            <h2>ELETTROMECCANICA T&M srl</h2>
+
+        </div>
+
+        <div class="decorazione"></div>
+
+    </header>
+
+
+    <!-- CONTATTI TELEFONICI -->
+    <section class="sezione">
+
+        <div class="titolo-sezione">
+            <span class="icona">☎</span>
+
+            <div>
+                <h3>Contatti telefonici</h3>
+                <p>Parla direttamente con noi</p>
+            </div>
+        </div>
+
+        <div class="lista-contatti">
+
+            <a href="tel:+393482498072" class="contatto">
+
+                <span class="contatto-icona">📱</span>
+
+                <span class="contatto-info">
+                    <small>Cellulare diretto</small>
+                    <strong>+39 3482498072</strong>
+                </span>
+
+                <span class="freccia">›</span>
+
+            </a>
+
+
+            <a href="tel:+39042142347" class="contatto">
+
+                <span class="contatto-icona">☎</span>
+
+                <span class="contatto-info">
+                    <small>Telefono aziendale</small>
+                    <strong>+39 0421 42347</strong>
+                </span>
+
+                <span class="freccia">›</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATTI DIGITALI -->
+    <section class="sezione">
+
+        <div class="titolo-sezione">
+            <span class="icona">✉</span>
+
+            <div>
+                <h3>Contatti digitali</h3>
+                <p>Scrivici o visita il nostro sito</p>
+            </div>
+        </div>
+
+        <div class="lista-contatti">
+
+            <a href="https://elettromeccanicatm.it/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contatto">
+
+                <span class="contatto-icona">🌐</span>
+
+                <span class="contatto-info">
+                    <small>Sito internet</small>
+                    <strong>elettromeccanicatm.it</strong>
+                </span>
+
+                <span class="freccia">↗</span>
+
+            </a>
+
+
+            <a href="mailto:mbalducci@tamaieminetto.it" class="contatto">
+
+                <span class="contatto-icona">✉</span>
+
+                <span class="contatto-info">
+                    <small>Email personale</small>
+                    <strong>mbalducci@tamaieminetto.it</strong>
+                </span>
+
+                <span class="freccia">›</span>
+
+            </a>
+
+
+            <a href="mailto:info@tamaieminetto.it" class="contatto">
+
+                <span class="contatto-icona">✉</span>
+
+                <span class="contatto-info">
+                    <small>Email ufficio</small>
+                    <strong>info@tamaieminetto.it</strong>
+                </span>
+
+                <span class="freccia">›</span>
+
+            </a>
+
+
+            <a href="mailto:elettromeccanicatm@pecodc.it" class="contatto">
+
+                <span class="contatto-icona">✉</span>
+
+                <span class="contatto-info">
+                    <small>Posta elettronica certificata</small>
+                    <strong>elettromeccanicatm@pecodc.it</strong>
+                </span>
+
+                <span class="freccia">›</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEDE AZIENDALE -->
+    <section class="sezione">
+
+        <div class="titolo-sezione">
+            <span class="icona">⌖</span>
+
+            <div>
+                <h3>Sede aziendale</h3>
+                <p>Dove puoi trovarci</p>
+            </div>
+        </div>
+
+        <div class="indirizzo">
+
+            <strong>ELETTROMECCANICA T&M </strong>
+
+            <p>
+                Via Kennedy, 18<br>
+                San Donà di Piave (VE)
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SALVA CONTATTO -->
+    <section class="salva">
+
+        <h3>Salva i nostri contatti</h3>
+
+        <p>
+            Aggiungi il nostro contatto direttamente
+            alla rubrica del tuo smartphone.
+        </p>
+
+        <button id="salva-contatto">
+            ↓ &nbsp; SALVA CONTATTO
+        </button>
+
+    </section>
+
+
+    <footer>
+        <p>ELETTROMECCANICA T&M</p>
+        <span>Grazie per averci contattato</span>
+    </footer>
+
+</main>
+
+
+<!-- GENERAZIONE AUTOMATICA DEL CONTATTO VCARD -->
+<script>
+
+const azienda = {
+    nome: "Massimiliano Balducci",
+    societa: "ELETTROMECCANICA T&M srl",
+    ruolo: "General Manager",
+
+    cellulare: "+393482498072",
+    fisso: "+39042142347",
+
+    sito: "https://elettromeccanicatm.it/",
+
+    emailPersonale: "mbalducci@tamaieminetto.it",
+    emailUfficio: "info@tamaieminetto.it",
+    pec: "elettromeccanicatm@pecodc.it",
+
+    via: "Via Kennedy, 18",
+    paese: "San Donà di Piave",
+    provincia: "VE",
+    nazione: "Italia"
+};
+
+
+// Funzione per formattare correttamente i dati vCard
+function escapeVCard(testo) {
+    return String(testo)
+        .replace(/\\/g, "\\\\")
+        .replace(/\n/g, "\\n")
+        .replace(/,/g, "\\,")
+        .replace(/;/g, "\\;");
+}
+
+
+// Creazione e download del contatto
+document.getElementById("salva-contatto")
+.addEventListener("click", function () {
+
+    const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        `FN:${escapeVCard(azienda.nome)}`,
+        `ORG:${escapeVCard(azienda.societa)}`,
+        `TITLE:${escapeVCard(azienda.ruolo)}`,
+        `TEL;TYPE=CELL,VOICE:${azienda.cellulare}`,
+        `TEL;TYPE=WORK,VOICE:${azienda.fisso}`,
+        `EMAIL;TYPE=HOME:${azienda.emailPersonale}`,
+        `EMAIL;TYPE=WORK:${azienda.emailUfficio}`,
+        `EMAIL;TYPE=WORK:${azienda.pec}`,
+        `URL:${azienda.sito}`,
+        `ADR;TYPE=WORK:;;${escapeVCard(azienda.via)};${escapeVCard(azienda.paese)};${escapeVCard(azienda.provincia)};;${azienda.nazione}`,
+        "END:VCARD"
+    ].join("\r\n");
+
+    const file = new Blob(
+        [vcard],
+        { type: "text/vcard;charset=utf-8" }
+    );
+
+    const url = URL.createObjectURL(file);
+
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "contatto_azienda.vcf";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    URL.revokeObjectURL(url);
+
+});
+
+</script>
+
+</body>
+</html>

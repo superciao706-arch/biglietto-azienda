@@ -1,0 +1,419 @@
+
+/* =====================================
+   IMPOSTAZIONI GENERALI
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blu: #174c7e;
+    --blu-scuro: #123858;
+    --azzurro: #eaf4fc;
+    --azzurro-chiaro: #f5faff;
+    --testo: #26384a;
+    --grigio: #7c8b99;
+    --bordo: #e5edf4;
+    --bianco: #ffffff;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(
+        145deg,
+        #edf5fc,
+        #f8fbff
+    );
+
+    color: var(--testo);
+    min-height: 100vh;
+    padding: 35px 15px;
+}
+
+
+/* =====================================
+   CONTENITORE PRINCIPALE
+===================================== */
+
+.pagina {
+    max-width: 510px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    background: var(--bianco);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 40px rgba(30, 70, 110, 0.09);
+}
+
+
+/* =====================================
+   PROFILO AZIENDALE
+===================================== */
+
+.profilo {
+    position: relative;
+
+    text-align: center;
+
+    padding: 38px 25px 32px;
+
+    background: linear-gradient(
+        150deg,
+        #ffffff,
+        #eaf5fd
+    );
+
+    border-bottom: 1px solid var(--bordo);
+}
+
+.logo {
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 22px;
+
+    background: white;
+
+    border: 1px solid var(--bordo);
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(40, 90, 140, 0.08);
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.etichetta {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #5791bd;
+}
+
+.profilo h1 {
+    font-size: 27px;
+    font-weight: 700;
+
+    margin-top: 10px;
+
+    color: var(--blu-scuro);
+}
+
+.profilo h2 {
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-top: 8px;
+
+    color: var(--blu);
+}
+
+.ruolo {
+    font-size: 13px;
+    color: var(--grigio);
+
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   SEZIONI
+===================================== */
+
+.sezione {
+    padding: 25px 25px 5px;
+}
+
+.titolo-sezione {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 16px;
+}
+
+.icona {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--azzurro);
+
+    color: var(--blu);
+    font-size: 20px;
+}
+
+.titolo-sezione h3 {
+    font-size: 15px;
+    color: var(--blu-scuro);
+}
+
+.titolo-sezione p {
+    font-size: 11px;
+    color: var(--grigio);
+
+    margin-top: 3px;
+}
+
+
+/* =====================================
+   CONTATTI
+===================================== */
+
+.lista-contatti {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contatto {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px;
+
+    border: 1px solid var(--bordo);
+    border-radius: 11px;
+
+    background: var(--bianco);
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.contatto:hover {
+    background: var(--azzurro-chiaro);
+    border-color: #b9d8ef;
+
+    transform: translateY(-2px);
+}
+
+.contatto-icona {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--azzurro);
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+.contatto-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+    flex: 1;
+}
+
+.contatto-info small {
+    font-size: 11px;
+    color: var(--grigio);
+}
+
+.contatto-info strong {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--blu);
+    overflow-wrap: anywhere;
+}
+
+.freccia {
+    color: #8db6d7;
+    font-size: 23px;
+}
+
+
+/* =====================================
+   INDIRIZZO
+===================================== */
+
+.indirizzo {
+    padding: 17px;
+
+    background: var(--azzurro-chiaro);
+
+    border: 1px solid var(--bordo);
+    border-radius: 11px;
+
+    line-height: 1.7;
+}
+
+.indirizzo strong {
+    font-size: 14px;
+    color: var(--blu-scuro);
+}
+
+.indirizzo p {
+    margin-top: 5px;
+
+    font-size: 13px;
+    color: var(--grigio);
+}
+
+
+/* =====================================
+   SALVA CONTATTO
+===================================== */
+
+.salva {
+    margin: 28px 25px 10px;
+
+    padding: 23px 18px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #edf6fd,
+        #e4f1fb
+    );
+
+    border-radius: 14px;
+}
+
+.salva h3 {
+    font-size: 16px;
+    color: var(--blu-scuro);
+}
+
+.salva p {
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: var(--grigio);
+
+    margin: 9px 0 17px;
+}
+
+.salva button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--blu);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.salva button:hover {
+    background: var(--blu-scuro);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+
+    padding: 23px 15px 27px;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--blu);
+    letter-spacing: 1px;
+}
+
+footer span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+    color: var(--grigio);
+}
+
+
+/* =====================================
+   SMARTPHONE
+===================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px 10px;
+    }
+
+    .pagina {
+        border-radius: 15px;
+    }
+
+    .profilo {
+        padding: 30px 18px 26px;
+    }
+
+    .profilo h1 {
+        font-size: 23px;
+    }
+
+    .sezione {
+        padding: 22px 17px 4px;
+    }
+
+    .salva {
+        margin: 24px 17px 8px;
+    }
+
+    .contatto {
+        padding: 12px 10px;
+    }
+
+}
+
